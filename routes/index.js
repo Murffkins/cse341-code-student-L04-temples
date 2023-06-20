@@ -3,9 +3,7 @@ const temple = require('./temple');
 
 routes.use('/', require('./swagger'));
 routes.use('/temples', temple);
-routes.use(
-  '/',
-  (docData = (req, res) => {
+routes.use('/', (docData = (req, res) => {
     let docData = {
       documentationURL: 'https://nathanbirch.github.io/nathan-byui-api-docs',
     };
